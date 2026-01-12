@@ -7,8 +7,7 @@ import time
 
 # --- AYARLAR ---
 # 1. Adım: Yeni aldığın Token'ı tırnakların içine yapıştır.
-TOKEN = "MTQ2MDAzODI0MTU5MDk2ODYwNg.G-uS3G.xvS8G0TdwEwV1nOi59YHl_Xmwj6f5tWCdEYuSE"
-
+os.environ["TOKEN"]
 # Rütbe Sistemi
 # Sol taraf: Gereken Dakika (Örn: 600 = 10 Saat)
 # Sağ taraf: O rolün Discord ID'si
@@ -230,4 +229,5 @@ async def terfi(ctx, member: discord.Member, rol: discord.Role):
 if TOKEN == "BURAYA_YENI_TOKENI_YAPISTIR":
     print("HATA: Lütfen main.py dosyasındaki TOKEN değişkenine kendi bot token'ını yapıştır!")
 else:
+
     bot.run(TOKEN)

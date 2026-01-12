@@ -226,8 +226,10 @@ async def terfi(ctx, member: discord.Member, rol: discord.Role):
     await ctx.send(f"👑 {member.mention} kullanıcısına {rol.name} verildi!")
 
 # Botu çalıştır (Yukarıdaki TOKEN değişkenini kullanır)
-if TOKEN == "BURAYA_YENI_TOKENI_YAPISTIR":
+import os
+TOKEN = os.environ["TOKEN"]  # <-- Bu satır YOKSA ekle!
     print("HATA: Lütfen main.py dosyasındaki TOKEN değişkenine kendi bot token'ını yapıştır!")
 else:
 
     bot.run(TOKEN)
+
